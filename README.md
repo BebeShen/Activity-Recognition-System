@@ -30,3 +30,10 @@ IOT Final Project : Activity-Recognition-System
 2. Activity Recognition
 3. Presentation
 
+## Usage
+
+## Introduction
+
+## Reference
+
+* [Evidential fusion of sensor data for activity recognition in smart homes](https://www.sciencedirect.com/science/article/abs/pii/S157411920800045X)
