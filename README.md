@@ -5,10 +5,10 @@ IOT Final Project : Activity-Recognition-System
 - [ ]  Device Application ( See [Section 1](https://github.com/BebeShen/Activity-Recognition-System/edit/main/README.md#device-application) )
     - [ ]  Sensor
     - [ ]  simulation environment
-- [ ]  om2m Architecture, MN-CSE to IN-CSE to Server ( See Section 2 )
+- [ ]  om2m Architecture, MN-CSE to IN-CSE to Server ( See [Section 2](https://github.com/BebeShen/Activity-Recognition-System/edit/main/README.md#om2m-Architecture) )
     - [ ]  Connect MN-CSE &  IN-CSE
     - [ ]  Subscribe to DATA container
-- [ ]  Collect Data & Activity Recognition ( See Section 3 )
+- [ ]  Collect Data & Activity Recognition ( See [Section 3](https://github.com/BebeShen/Activity-Recognition-System/edit/main/README.md#Activity-Recognition) )
     - [ ]  python server
     - [ ]  GUI (?)
     
