@@ -16,6 +16,7 @@ IOT Final Project : Activity-Recognition-System
 
 1. Define the simulation environment & situation
 2. Define all DA ( USE App inventor or node-red inject node )
+3. **After DA definition, please tell what data are delievered**
 
 ## om2m Architecture
 
