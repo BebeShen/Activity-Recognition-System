@@ -13,19 +13,19 @@ IOT Final Project : Activity-Recognition-System
     - [ ]  GUI (?)
     
 ## Device Application
-
+* 妤婷
 1. Define the simulation environment & situation
 2. Define all DA ( USE App inventor or node-red inject node )
 3. **After DA definition, please tell what data are delievered**
 
 ## om2m Architecture
-
+* 子揚
 1. Connect all CSEs
 2. Subscribe to DATA containers
 3. Post to server (node-red)
 
 ## Activity Recognition
-
+* 以新
 1. Collect Data
 2. Activity Recognition
 3. Presentation
