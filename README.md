@@ -18,6 +18,17 @@ IOT Final Project : Activity-Recognition-System
 2. Define all DA ( USE App inventor or node-red inject node )
 3. **After DA definition, please tell what data are delievered**
 
+### DA
+
+- BedWeight -> Boolean
+- Light -> Boolean
+- Broom -> Boolean
+- Mop -> Boolean
+- Temp -> int: 10~30
+- AirCon -> Boolean
+- Motion -> Boolean
+- Door -> Boolean
+
 ## om2m Architecture
 * 子揚
 1. Connect all CSEs
