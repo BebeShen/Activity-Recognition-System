@@ -43,8 +43,76 @@ IOT Final Project : Activity-Recognition-System
 
 ## Usage
 
-## Introduction
+### Step 1: start 1 in-cse & 2 mn-cse
+
+```txt
+# content of mn-cse1/configuration/config.ini
+
+org.eclipse.equinox.http.jetty.http.port=8282
+org.eclipse.om2m.cseBaseContext=/
+org.eclipse.om2m.cseBaseProtocol.default=http
+org.eclipse.om2m.cseBaseName=mn-name
+org.eclipse.om2m.cseBaseAddress=127.0.0.1
+org.eclipse.om2m.cseBaseId=mn-cse
+```
+
+```
+# content of mn-cse2/configuration/config.ini
+
+org.eclipse.equinox.http.jetty.http.port=8383
+org.eclipse.om2m.cseBaseContext=/
+org.eclipse.om2m.cseBaseProtocol.default=http
+org.eclipse.om2m.cseBaseName=mn-name2
+org.eclipse.om2m.cseBaseAddress=127.0.0.1
+org.eclipse.om2m.cseBaseId=mn-cse2
+```
+
+So, `mn-cse1` is http://127.0.0.1:8282/webpage and `mn-cse2` is http://127.0.0.1:8383/webpage, and if 3 cse start gracefully, you would see the correct in-cse resource tree like following:
+
+![](/images/in-cse.png)
+
+### Step 2: start node-red & import flows
+
+In terminal:
+```shell
+node-red
+```
+
+Then, open http://127.0.0.1:1880/ , and import `mn-cse.json` & `in-cse.json`
+
+![](/images/importFlows.png)
+
+Click `Deploy` to restart node-red flow
+
+### Step 3: start http server
+
+In terminal:
+```shell
+uvicorn main:app --reload
+# or
+uvicorn main:app --reload --log-level "error"
+```
+
+Then you should see the server running on `8000` port
+
+### Step 4: Create Application & Container & Do Subscription
+
+![](/images/node-red_mn-cse.png)
+![](/images/node-red_in-cse.png)
+
+1. Create IN-CSE Application
+2. Create IN-CSE Container
+3. Subscribe to IN-CSE Data Container (this will parse data well and send request to  server)
+4. Create MN-CSE Application
+5. Create MN-CSE Container
+6. Subscribe to MN-CSE Data Container (this will duplicate contentInstance to IN-CSE)
+
+After the operations below, you could click `ContentInstance` in `MN-CSE` to change sensor data. 
+Then inject the node.
+
+![](/images/result.png)
 
 ## Reference
 
 * [Evidential fusion of sensor data for activity recognition in smart homes](https://www.sciencedirect.com/science/article/abs/pii/S157411920800045X)
+* [Multiple gateways scenario reference](https://wiki.eclipse.org/OM2M/one/Starting#Multiple_gateways_scenario)
