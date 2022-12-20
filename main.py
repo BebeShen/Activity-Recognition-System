@@ -10,21 +10,22 @@
 
 from fastapi import FastAPI, Request
 import uvicorn
+import json
 
 app = FastAPI()
 
-# Variables set up
+# # Variables set up
 
-broom = False 	    # bool
-motion = True 	    # bool
-mop = False		    # bool
+# broom = False 	    # bool
+# motion = True 	    # bool
+# mop = False		    # bool
 
-temperature = 26 	# int
-aircon = False		# bool
+# temperature = 26 	# int
+# aircon = False		# bool
 
-light = False		# bool
-weight = 45 	    # int
-door = False		# bool
+# light = False		# bool
+# weight = 45 	    # int
+# door = False		# bool
 
 # Server
 
@@ -32,17 +33,17 @@ door = False		# bool
 async def root():
     return {"message": "Hello World"}
 
-@app.post("/clean")
+@app.post("/behavior")
 async def t(
     request: Request
 ):
     data = await request.json()
     # print(data, data['broom'], data['motion'], data['mop'])
-    if not light and weight > 5: # light off and on the bed
+    if data['light'] == "false" and int(data['weight']) > 5: # light off and on the bed
         print("Sleeping")
-    elif light and weight > 5: # light on and on the bed
+    elif data['light'] == "true" and int(data['weight']) > 5: # light on and on the bed
         print("Awake")
-    elif not light and weight < 5 and door: # turn the light off, leave the bed, and open the door
+    elif data['light'] == "false"  and int(data['weight']) < 5 and data['door'] == "true": # turn the light off, leave the bed, and open the door
         print("Go out")
     return "clean suc"
 
@@ -51,11 +52,11 @@ async def t(
     request: Request
 ):
     data = await request.json()
-    # print(data, data['temperature'], data['aircon'])
-    if aircon:
-        if temp > 28:
+    print(data, data['temperature'], data['aircon'], type(data['aircon']))
+    if data['aircon'] == "true":
+        if int(data['temperature']) > 28:
             print("Cool mode")
-        elif temp < 20:
+        elif int(data['temperature']) < 20:
             print("Heat mode")
         else:
             print("Fan mode")
@@ -63,19 +64,19 @@ async def t(
         print("Air conditioner off")
     return "aircon suc"
 
-@app.post("/behavior")
+@app.post("/clean")
 async def t(
     request: Request
 ):
     data = await request.json()
     # print(data, data['light'], data['weight'], data['door'])
-    if not motion:
+    if data['motion'] == "false":
         print("Doing nothing")
     else:
-        if broom and not mop:
+        if data["broom"] == "true" and data["mop"] == "false":
             print("Act: Cleaning the room")
             print("Sub-act: Sweeping the floor")
-        elif mop and not broom:
+        elif data["mop"] == "true" and data["broom"] == "false":
             print("Act: Cleaning the room")
             print("Sub-act: Mopping the floor")
         else:
@@ -83,4 +84,4 @@ async def t(
     return "behavior suc"
 
 if __name__ == "__main__":
-    uvicorn.run(app='main:app', host="127.0.0.1", port=8000, reload=True, debug=True)
+    uvicorn.run(app='main:app', host="127.0.0.1", port=8000, reload=True)
