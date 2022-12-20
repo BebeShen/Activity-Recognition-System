@@ -86,7 +86,15 @@ Click `Deploy` to restart node-red flow
 
 ### Step 3: start http server
 
-In terminal:
+Install prerequisite module:
+
+```shell
+pip install fastapi uvicorn
+sudo apt-get install python3.10-tk
+```
+
+Start server: 
+
 ```shell
 uvicorn main:app --reload
 # or
