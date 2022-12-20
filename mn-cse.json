@@ -94,6 +94,50 @@
         "h": 422
     },
     {
+        "id": "cef395fa0d3f23dd",
+        "type": "group",
+        "z": "a1bb721628caad2a",
+        "style": {
+            "stroke": "#999999",
+            "stroke-opacity": "1",
+            "fill": "none",
+            "fill-opacity": "1",
+            "label": true,
+            "label-position": "nw",
+            "color": "#a4a4a4"
+        },
+        "nodes": [
+            "077a99454d9777b4",
+            "5abbdd8a60b57097",
+            "b4dc5a2c4eadda0f",
+            "1c2a01273df13f6f",
+            "98f397fcc47706df",
+            "2e849c7bc9946d61",
+            "15f2a64fb091bfaa",
+            "c2349d4ecd71324c",
+            "03644fa7a1445f05",
+            "3d12c1858e3df28e",
+            "34920a587f45eeee",
+            "aeaaa84b7f120bb9",
+            "c044b98a5bba7311",
+            "1ea7c4b5d673bea4",
+            "7528f89b18ab4f85",
+            "ac049bdbe4f6ec98",
+            "0c18ad81bd40ca65",
+            "d2d4c37ba3d5e486",
+            "75da84b49bd6743a",
+            "bf20a319ca5f52d1",
+            "16be510377e213f1",
+            "a15ce42a347509fe",
+            "12b3c220a504384c",
+            "420b06ce35a3fa59"
+        ],
+        "x": 254,
+        "y": 959,
+        "w": 1772,
+        "h": 462
+    },
+    {
         "id": "9a1908da2dad37a1",
         "type": "comment",
         "z": "a1bb721628caad2a",
@@ -305,12 +349,12 @@
             {
                 "type": "int",
                 "label": "temperature",
-                "value": "28"
+                "value": "30"
             },
             {
                 "type": "bool",
                 "label": "aircon",
-                "value": "false"
+                "value": "true"
             }
         ],
         "x": 560,
@@ -568,6 +612,7 @@
         "id": "077a99454d9777b4",
         "type": "inject",
         "z": "a1bb721628caad2a",
+        "g": "cef395fa0d3f23dd",
         "name": "",
         "props": [
             {
@@ -585,7 +630,7 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 140,
+        "x": 400,
         "y": 1000,
         "wires": [
             [
@@ -597,6 +642,7 @@
         "id": "5abbdd8a60b57097",
         "type": "inject",
         "z": "a1bb721628caad2a",
+        "g": "cef395fa0d3f23dd",
         "name": "",
         "props": [
             {
@@ -614,8 +660,8 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 140,
-        "y": 1080,
+        "x": 400,
+        "y": 1060,
         "wires": [
             [
                 "98f397fcc47706df"
@@ -626,6 +672,7 @@
         "id": "b4dc5a2c4eadda0f",
         "type": "inject",
         "z": "a1bb721628caad2a",
+        "g": "cef395fa0d3f23dd",
         "name": "",
         "props": [
             {
@@ -643,8 +690,8 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 140,
-        "y": 1160,
+        "x": 400,
+        "y": 1200,
         "wires": [
             [
                 "03644fa7a1445f05"
@@ -655,6 +702,7 @@
         "id": "1c2a01273df13f6f",
         "type": "Application",
         "z": "a1bb721628caad2a",
+        "g": "cef395fa0d3f23dd",
         "name": "",
         "platform": "b899949f9f23b9c8",
         "name1": "f28216f7138b06fe",
@@ -668,7 +716,7 @@
             }
         ],
         "cntInstance": "",
-        "x": 310,
+        "x": 570,
         "y": 1000,
         "wires": [
             [
@@ -680,13 +728,14 @@
         "id": "98f397fcc47706df",
         "type": "Container",
         "z": "a1bb721628caad2a",
+        "g": "cef395fa0d3f23dd",
         "name": "",
         "platform": "b899949f9f23b9c8",
         "name1": "f28216f7138b06fe",
         "viewtype": "DATA",
         "viewunid1": "test_other",
-        "x": 300,
-        "y": 1080,
+        "x": 560,
+        "y": 1060,
         "wires": [
             [
                 "15f2a64fb091bfaa"
@@ -697,6 +746,7 @@
         "id": "2e849c7bc9946d61",
         "type": "debug",
         "z": "a1bb721628caad2a",
+        "g": "cef395fa0d3f23dd",
         "name": "debug13",
         "active": false,
         "tosidebar": true,
@@ -706,7 +756,7 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 520,
+        "x": 780,
         "y": 1000,
         "wires": []
     },
@@ -714,6 +764,7 @@
         "id": "15f2a64fb091bfaa",
         "type": "debug",
         "z": "a1bb721628caad2a",
+        "g": "cef395fa0d3f23dd",
         "name": "debug14",
         "active": false,
         "tosidebar": true,
@@ -723,14 +774,15 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 480,
-        "y": 1080,
+        "x": 740,
+        "y": 1060,
         "wires": []
     },
     {
         "id": "c2349d4ecd71324c",
         "type": "debug",
         "z": "a1bb721628caad2a",
+        "g": "cef395fa0d3f23dd",
         "name": "debug15",
         "active": false,
         "tosidebar": true,
@@ -740,14 +792,15 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 500,
-        "y": 1160,
+        "x": 760,
+        "y": 1200,
         "wires": []
     },
     {
         "id": "03644fa7a1445f05",
         "type": "ContentInstance",
         "z": "a1bb721628caad2a",
+        "g": "cef395fa0d3f23dd",
         "name": "",
         "platform": "b899949f9f23b9c8",
         "name1": "f28216f7138b06fe",
@@ -762,7 +815,7 @@
             {
                 "type": "bool",
                 "label": "light",
-                "value": "false"
+                "value": "true"
             },
             {
                 "type": "bool",
@@ -770,8 +823,8 @@
                 "value": "false"
             }
         ],
-        "x": 320,
-        "y": 1160,
+        "x": 580,
+        "y": 1200,
         "wires": [
             [
                 "c2349d4ecd71324c"
@@ -1048,6 +1101,7 @@
         "id": "d2d4c37ba3d5e486",
         "type": "function",
         "z": "a1bb721628caad2a",
+        "g": "cef395fa0d3f23dd",
         "name": "set object",
         "func": "\nvar New = { weight: 50, light: false, door: false};\nNew.weight = msg.payload.obj.int[0].$.val;\nNew.light = msg.payload.obj.bool[0].$.val;\nNew.door = msg.payload.obj.bool[1].$.val;\nmsg.payload = New;\nreturn msg;\n\n",
         "outputs": 1,
@@ -1055,8 +1109,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1080,
-        "y": 1500,
+        "x": 1300,
+        "y": 1380,
         "wires": [
             [
                 "bf20a319ca5f52d1",
@@ -1068,8 +1122,9 @@
         "id": "bf20a319ca5f52d1",
         "type": "debug",
         "z": "a1bb721628caad2a",
+        "g": "cef395fa0d3f23dd",
         "name": "debug17",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -1077,14 +1132,15 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1260,
-        "y": 1500,
+        "x": 1480,
+        "y": 1380,
         "wires": []
     },
     {
         "id": "3d12c1858e3df28e",
         "type": "inject",
         "z": "a1bb721628caad2a",
+        "g": "cef395fa0d3f23dd",
         "name": "",
         "props": [
             {
@@ -1102,8 +1158,8 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 140,
-        "y": 1240,
+        "x": 400,
+        "y": 1140,
         "wires": [
             [
                 "34920a587f45eeee"
@@ -1114,13 +1170,14 @@
         "id": "34920a587f45eeee",
         "type": "Subscription",
         "z": "a1bb721628caad2a",
+        "g": "cef395fa0d3f23dd",
         "name": "",
         "platform": "b899949f9f23b9c8",
         "sensor": "f28216f7138b06fe",
         "container": "DATA",
-        "path": "http://localhost:1880/behavior",
-        "x": 310,
-        "y": 1240,
+        "path": "http://localhost:1880/sBehavior",
+        "x": 570,
+        "y": 1140,
         "wires": [
             [
                 "aeaaa84b7f120bb9"
@@ -1131,6 +1188,7 @@
         "id": "aeaaa84b7f120bb9",
         "type": "debug",
         "z": "a1bb721628caad2a",
+        "g": "cef395fa0d3f23dd",
         "name": "debug16",
         "active": false,
         "tosidebar": true,
@@ -1140,8 +1198,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 500,
-        "y": 1240,
+        "x": 760,
+        "y": 1140,
         "wires": []
     },
     {
@@ -1150,7 +1208,7 @@
         "z": "a1bb721628caad2a",
         "g": "e424da1690ef46c5",
         "name": "Set payload & headers",
-        "func": "/*jshint multistr: true */\nvar data = {\n\t\"motion\": msg.payload.motion,\n\t\"broom\": msg.payload.broom,\n\t\"mop\": msg.payload.mop\n};\nmsg.payload = data;\nmsg.headers = {};\nmsg.headers['content-type'] = 'application/json';\nreturn msg;",
+        "func": "/*jshint multistr: true */\nvar data = \n\t'<m2m:cin xmlns:m2m=\"http://www.onem2m.org/xml/protocols\">\\\n    <cnf>message</cnf>\\\n    <con>\\\n      &lt;obj&gt;\\\n        &lt;bool name=&quot;motion&quot; val=&quot;'+ msg.payload.motion + '&quot;/&gt;\\\n        &lt;bool name=&quot;broom&quot; val=&quot;'+ msg.payload.broom + '&quot;/&gt;\\\n        &lt;bool name=&quot;mop&quot; val=&quot;'+ msg.payload.mop + '&quot;/&gt;\\\n      &lt;/obj&gt;\\\n    </con>\\\n    </m2m:cin>';\nmsg.payload = data;\nmsg.headers = {};\nmsg.headers['X-M2M-Origin'] = 'admin:admin';\nmsg.headers['Content-Type'] = 'application/xml;ty=4';\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -1182,7 +1240,6 @@
         "authType": "",
         "senderr": false,
         "headers": [],
-        "credentials": {},
         "x": 1710,
         "y": 760,
         "wires": [
@@ -1208,15 +1265,16 @@
         "id": "ac049bdbe4f6ec98",
         "type": "function",
         "z": "a1bb721628caad2a",
+        "g": "cef395fa0d3f23dd",
         "name": "Set payload & headers",
-        "func": "/*jshint multistr: true */\nvar data = {\n\t\"weight\": msg.payload.weight,\n\t\"light\": msg.payload.light,\n\t\"door\": msg.payload.door\n};\nmsg.payload = data;\nmsg.headers = {};\nmsg.headers['content-type'] = 'application/json';\nreturn msg;",
+        "func": "/*jshint multistr: true */\n\nvar data =\n\t'<m2m:cin xmlns:m2m=\"http://www.onem2m.org/xml/protocols\">\\\n    <cnf>message</cnf>\\\n    <con>\\\n      &lt;obj&gt;\\\n        &lt;int name=&quot;weight&quot; val=&quot;'+ msg.payload.weight + '&quot;/&gt;\\\n        &lt;bool name=&quot;light&quot; val=&quot;'+ msg.payload.light + '&quot;/&gt;\\\n        &lt;bool name=&quot;door&quot; val=&quot;'+ msg.payload.door + '&quot;/&gt;\\\n      &lt;/obj&gt;\\\n    </con>\\\n    </m2m:cin>';\n\t\nmsg.payload = data;\nmsg.headers = {};\nmsg.headers['X-M2M-Origin'] = 'admin:admin';\nmsg.headers['Content-Type'] = 'application/xml;ty=4';\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1280,
-        "y": 1420,
+        "x": 1500,
+        "y": 1300,
         "wires": [
             [
                 "7528f89b18ab4f85"
@@ -1227,11 +1285,12 @@
         "id": "1ea7c4b5d673bea4",
         "type": "http response",
         "z": "a1bb721628caad2a",
+        "g": "cef395fa0d3f23dd",
         "name": "behavior response",
         "statusCode": "",
         "headers": {},
-        "x": 1690,
-        "y": 1420,
+        "x": 1910,
+        "y": 1300,
         "wires": []
     },
     {
@@ -1431,11 +1490,12 @@
         "z": "a1bb721628caad2a",
         "g": "e424da1690ef46c5",
         "name": "debug 7",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
-        "complete": "false",
+        "complete": "payload",
+        "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
         "x": 1680,
@@ -1448,11 +1508,12 @@
         "z": "a1bb721628caad2a",
         "g": "e424da1690ef46c5",
         "name": "debug 8",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
-        "complete": "false",
+        "complete": "payload",
+        "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
         "x": 1920,
@@ -1463,11 +1524,12 @@
         "id": "7528f89b18ab4f85",
         "type": "http request",
         "z": "a1bb721628caad2a",
+        "g": "cef395fa0d3f23dd",
         "name": "post to in-cse",
         "method": "POST",
         "ret": "txt",
         "paytoqs": "ignore",
-        "url": "http://127.0.0.1:8080/~/in-cse/in-name/Clean_Room/DATA",
+        "url": "http://127.0.0.1:8080/~/in-cse/in-name/Behavior/DATA",
         "tls": "",
         "persist": false,
         "proxy": "",
@@ -1475,8 +1537,8 @@
         "authType": "",
         "senderr": false,
         "headers": [],
-        "x": 1490,
-        "y": 1420,
+        "x": 1710,
+        "y": 1300,
         "wires": [
             [
                 "0c18ad81bd40ca65",
@@ -1488,28 +1550,30 @@
         "id": "0c18ad81bd40ca65",
         "type": "debug",
         "z": "a1bb721628caad2a",
+        "g": "cef395fa0d3f23dd",
         "name": "debug 9",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1700,
-        "y": 1500,
+        "x": 1920,
+        "y": 1380,
         "wires": []
     },
     {
         "id": "75da84b49bd6743a",
         "type": "xml",
         "z": "a1bb721628caad2a",
+        "g": "cef395fa0d3f23dd",
         "name": "con to xml",
         "property": "payload",
         "attr": "",
         "chr": "",
-        "x": 890,
-        "y": 1500,
+        "x": 1130,
+        "y": 1380,
         "wires": [
             [
                 "d2d4c37ba3d5e486"
@@ -1520,6 +1584,7 @@
         "id": "16be510377e213f1",
         "type": "function",
         "z": "a1bb721628caad2a",
+        "g": "cef395fa0d3f23dd",
         "name": "take out state",
         "func": "var data = msg.payload[\"m2m:sgn\"].nev[0].rep[0][\"m2m:cin\"][0].con[0];\nmsg.payload = data\nreturn msg;",
         "outputs": 1,
@@ -1527,8 +1592,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 700,
-        "y": 1500,
+        "x": 920,
+        "y": 1380,
         "wires": [
             [
                 "75da84b49bd6743a"
@@ -1539,6 +1604,7 @@
         "id": "a15ce42a347509fe",
         "type": "switch",
         "z": "a1bb721628caad2a",
+        "g": "cef395fa0d3f23dd",
         "name": "",
         "property": "payload[\"m2m:sgn\"].nev[0]",
         "propertyType": "msg",
@@ -1553,8 +1619,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 510,
-        "y": 1460,
+        "x": 730,
+        "y": 1340,
         "wires": [
             [
                 "420b06ce35a3fa59"
@@ -1568,12 +1634,13 @@
         "id": "12b3c220a504384c",
         "type": "xml",
         "z": "a1bb721628caad2a",
+        "g": "cef395fa0d3f23dd",
         "name": "payload to xml",
         "property": "payload",
         "attr": "",
         "chr": "",
-        "x": 340,
-        "y": 1460,
+        "x": 560,
+        "y": 1340,
         "wires": [
             [
                 "a15ce42a347509fe"
@@ -1584,24 +1651,26 @@
         "id": "420b06ce35a3fa59",
         "type": "http response",
         "z": "a1bb721628caad2a",
+        "g": "cef395fa0d3f23dd",
         "name": "Notification Response",
         "statusCode": "",
         "headers": {},
-        "x": 720,
-        "y": 1440,
+        "x": 940,
+        "y": 1320,
         "wires": []
     },
     {
         "id": "c044b98a5bba7311",
         "type": "http in",
         "z": "a1bb721628caad2a",
+        "g": "cef395fa0d3f23dd",
         "name": "",
         "url": "/sBehavior",
         "method": "post",
         "upload": false,
         "swaggerDoc": "",
-        "x": 140,
-        "y": 1460,
+        "x": 360,
+        "y": 1340,
         "wires": [
             [
                 "12b3c220a504384c"

@@ -92,6 +92,48 @@
         "h": 442
     },
     {
+        "id": "75a9faf82f56a5fa",
+        "type": "group",
+        "z": "3226418c73eb35d6",
+        "style": {
+            "stroke": "#999999",
+            "stroke-opacity": "1",
+            "fill": "none",
+            "fill-opacity": "1",
+            "label": true,
+            "label-position": "nw",
+            "color": "#a4a4a4"
+        },
+        "nodes": [
+            "e5edc2535666c80a",
+            "93923e67b2141147",
+            "34ba5426ad08bb9e",
+            "967f3ed10b4889e0",
+            "711e89559ab2bb22",
+            "306d57678c151c6f",
+            "11134c5117306707",
+            "ba86f62302a24276",
+            "f46e8645281eccde",
+            "0bdca29a9c5a897c",
+            "db9b533228f5d3ed",
+            "f75a897055584388",
+            "c5739a426ab3d262",
+            "97173debba722aa8",
+            "a9d6b88cc167d6e4",
+            "613a699649426a07",
+            "5c126e547d24e505",
+            "bb0a272b0dc5dec7",
+            "a7ab1d701e913d90",
+            "d5083c0b0f49e46d",
+            "d059ecbd112d1eeb",
+            "1e9918272461fbf4"
+        ],
+        "x": 94,
+        "y": 979,
+        "w": 1892,
+        "h": 442
+    },
+    {
         "id": "cfe6a6e6c7580f7e",
         "type": "http response",
         "z": "3226418c73eb35d6",
@@ -525,7 +567,7 @@
         "z": "3226418c73eb35d6",
         "g": "c2ce7a82e34b0763",
         "name": "aircon",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -542,7 +584,7 @@
         "type": "comment",
         "z": "3226418c73eb35d6",
         "g": "98e8ca3b92f90153",
-        "name": "IN-CSE Temp_Aircon",
+        "name": "IN-CSE Clean_Room",
         "info": "",
         "x": 220,
         "y": 540,
@@ -971,7 +1013,7 @@
         "z": "3226418c73eb35d6",
         "g": "98e8ca3b92f90153",
         "name": "clean",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -981,6 +1023,452 @@
         "statusType": "auto",
         "x": 370,
         "y": 900,
+        "wires": []
+    },
+    {
+        "id": "e5edc2535666c80a",
+        "type": "comment",
+        "z": "3226418c73eb35d6",
+        "g": "75a9faf82f56a5fa",
+        "name": "IN-CSE Behavior",
+        "info": "",
+        "x": 200,
+        "y": 1020,
+        "wires": []
+    },
+    {
+        "id": "93923e67b2141147",
+        "type": "inject",
+        "z": "3226418c73eb35d6",
+        "g": "75a9faf82f56a5fa",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 200,
+        "y": 1080,
+        "wires": [
+            [
+                "967f3ed10b4889e0"
+            ]
+        ]
+    },
+    {
+        "id": "34ba5426ad08bb9e",
+        "type": "inject",
+        "z": "3226418c73eb35d6",
+        "g": "75a9faf82f56a5fa",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 200,
+        "y": 1160,
+        "wires": [
+            [
+                "711e89559ab2bb22"
+            ]
+        ]
+    },
+    {
+        "id": "967f3ed10b4889e0",
+        "type": "Application",
+        "z": "3226418c73eb35d6",
+        "g": "75a9faf82f56a5fa",
+        "name": "IN-CSE Behavior",
+        "platform": "50471d6cbb8a02f9",
+        "name1": "f28216f7138b06fe",
+        "pointOfAccess": "",
+        "obixAnnounce": false,
+        "width": 0,
+        "options": [
+            {
+                "label": "Location",
+                "value": "bedroom"
+            }
+        ],
+        "cntInstance": "",
+        "x": 390,
+        "y": 1080,
+        "wires": [
+            [
+                "306d57678c151c6f"
+            ]
+        ]
+    },
+    {
+        "id": "711e89559ab2bb22",
+        "type": "Container",
+        "z": "3226418c73eb35d6",
+        "g": "75a9faf82f56a5fa",
+        "name": "IN-CSE Behavior Container",
+        "platform": "50471d6cbb8a02f9",
+        "name1": "f28216f7138b06fe",
+        "viewtype": "DATA",
+        "viewunid1": "test_other",
+        "x": 420,
+        "y": 1160,
+        "wires": [
+            [
+                "11134c5117306707"
+            ]
+        ]
+    },
+    {
+        "id": "306d57678c151c6f",
+        "type": "debug",
+        "z": "3226418c73eb35d6",
+        "g": "75a9faf82f56a5fa",
+        "name": "debug1",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 660,
+        "y": 1080,
+        "wires": []
+    },
+    {
+        "id": "11134c5117306707",
+        "type": "debug",
+        "z": "3226418c73eb35d6",
+        "g": "75a9faf82f56a5fa",
+        "name": "debug2",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 660,
+        "y": 1160,
+        "wires": []
+    },
+    {
+        "id": "ba86f62302a24276",
+        "type": "inject",
+        "z": "3226418c73eb35d6",
+        "g": "75a9faf82f56a5fa",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 200,
+        "y": 1220,
+        "wires": [
+            [
+                "f46e8645281eccde"
+            ]
+        ]
+    },
+    {
+        "id": "f46e8645281eccde",
+        "type": "Subscription",
+        "z": "3226418c73eb35d6",
+        "g": "75a9faf82f56a5fa",
+        "name": "IN-CSE Behavior Subscription",
+        "platform": "50471d6cbb8a02f9",
+        "sensor": "f28216f7138b06fe",
+        "container": "DATA",
+        "path": "http://localhost:1880/behavior",
+        "x": 430,
+        "y": 1220,
+        "wires": [
+            [
+                "0bdca29a9c5a897c"
+            ]
+        ]
+    },
+    {
+        "id": "0bdca29a9c5a897c",
+        "type": "debug",
+        "z": "3226418c73eb35d6",
+        "g": "75a9faf82f56a5fa",
+        "name": "debug4",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 660,
+        "y": 1220,
+        "wires": []
+    },
+    {
+        "id": "db9b533228f5d3ed",
+        "type": "http response",
+        "z": "3226418c73eb35d6",
+        "g": "75a9faf82f56a5fa",
+        "name": "Notification Response",
+        "statusCode": "",
+        "headers": {},
+        "x": 800,
+        "y": 1280,
+        "wires": []
+    },
+    {
+        "id": "f75a897055584388",
+        "type": "function",
+        "z": "3226418c73eb35d6",
+        "g": "75a9faf82f56a5fa",
+        "name": "take out state",
+        "func": "var data = msg.payload[\"m2m:sgn\"].nev[0].rep[0][\"m2m:cin\"][0].con[0];\nmsg.payload = data\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 780,
+        "y": 1360,
+        "wires": [
+            [
+                "c5739a426ab3d262"
+            ]
+        ]
+    },
+    {
+        "id": "c5739a426ab3d262",
+        "type": "xml",
+        "z": "3226418c73eb35d6",
+        "g": "75a9faf82f56a5fa",
+        "name": "con to xml",
+        "property": "payload",
+        "attr": "",
+        "chr": "",
+        "x": 970,
+        "y": 1360,
+        "wires": [
+            [
+                "97173debba722aa8"
+            ]
+        ]
+    },
+    {
+        "id": "97173debba722aa8",
+        "type": "function",
+        "z": "3226418c73eb35d6",
+        "g": "75a9faf82f56a5fa",
+        "name": "set object",
+        "func": "\nvar New = { weight: 0, light: false, door: false };\nNew.weight = msg.payload.obj.int[0].$.val;\nNew.light = msg.payload.obj.bool[0].$.val;\nNew.door = msg.payload.obj.bool[1].$.val;\nmsg.payload = New;\nreturn msg;\n\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1140,
+        "y": 1360,
+        "wires": [
+            [
+                "a9d6b88cc167d6e4"
+            ]
+        ]
+    },
+    {
+        "id": "a9d6b88cc167d6e4",
+        "type": "function",
+        "z": "3226418c73eb35d6",
+        "g": "75a9faf82f56a5fa",
+        "name": "Set payload & headers",
+        "func": "/*jshint multistr: true */\nvar data = {\n\t\"weight\": msg.payload.weight,\n\t\"light\": msg.payload.light,\n\t\"door\": msg.payload.door\n};\nmsg.payload = data;\nmsg.headers = {};\nmsg.headers['content-type'] = 'application/json';\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1360,
+        "y": 1300,
+        "wires": [
+            [
+                "613a699649426a07"
+            ]
+        ]
+    },
+    {
+        "id": "613a699649426a07",
+        "type": "http request",
+        "z": "3226418c73eb35d6",
+        "g": "75a9faf82f56a5fa",
+        "name": "post to server",
+        "method": "POST",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "http://127.0.0.1:8000/behavior",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 1600,
+        "y": 1300,
+        "wires": [
+            [
+                "5c126e547d24e505",
+                "bb0a272b0dc5dec7"
+            ]
+        ]
+    },
+    {
+        "id": "5c126e547d24e505",
+        "type": "debug",
+        "z": "3226418c73eb35d6",
+        "g": "75a9faf82f56a5fa",
+        "name": "msg.statusCode",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1820,
+        "y": 1300,
+        "wires": []
+    },
+    {
+        "id": "bb0a272b0dc5dec7",
+        "type": "http response",
+        "z": "3226418c73eb35d6",
+        "g": "75a9faf82f56a5fa",
+        "name": "behavior response",
+        "statusCode": "",
+        "headers": {},
+        "x": 1870,
+        "y": 1360,
+        "wires": []
+    },
+    {
+        "id": "a7ab1d701e913d90",
+        "type": "switch",
+        "z": "3226418c73eb35d6",
+        "g": "75a9faf82f56a5fa",
+        "name": "",
+        "property": "payload[\"m2m:sgn\"].nev[0]",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "null"
+            },
+            {
+                "t": "nnull"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 570,
+        "y": 1320,
+        "wires": [
+            [
+                "db9b533228f5d3ed"
+            ],
+            [
+                "f75a897055584388"
+            ]
+        ]
+    },
+    {
+        "id": "d5083c0b0f49e46d",
+        "type": "xml",
+        "z": "3226418c73eb35d6",
+        "g": "75a9faf82f56a5fa",
+        "name": "payload to xml",
+        "property": "payload",
+        "attr": "",
+        "chr": "",
+        "x": 400,
+        "y": 1320,
+        "wires": [
+            [
+                "a7ab1d701e913d90"
+            ]
+        ]
+    },
+    {
+        "id": "d059ecbd112d1eeb",
+        "type": "http in",
+        "z": "3226418c73eb35d6",
+        "g": "75a9faf82f56a5fa",
+        "name": "",
+        "url": "/behavior",
+        "method": "post",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 200,
+        "y": 1320,
+        "wires": [
+            [
+                "d5083c0b0f49e46d",
+                "1e9918272461fbf4"
+            ]
+        ]
+    },
+    {
+        "id": "1e9918272461fbf4",
+        "type": "debug",
+        "z": "3226418c73eb35d6",
+        "g": "75a9faf82f56a5fa",
+        "name": "behavior",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 380,
+        "y": 1380,
         "wires": []
     },
     {
@@ -1000,5 +1488,10 @@
         "id": "d34ce5c1e140b6c3",
         "type": "AE",
         "appId": "Clean_Room"
+    },
+    {
+        "id": "f28216f7138b06fe",
+        "type": "AE",
+        "appId": "Behavior"
     }
 ]
